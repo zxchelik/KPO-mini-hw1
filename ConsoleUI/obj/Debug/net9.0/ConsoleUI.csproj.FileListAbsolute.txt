@@ -1,0 +1,11 @@
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/bin/Debug/net9.0/ConsoleUI.deps.json
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/bin/Debug/net9.0/ConsoleUI.dll
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/bin/Debug/net9.0/ConsoleUI.pdb
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ConsoleUI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ConsoleUI.AssemblyInfoInputs.cache
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ConsoleUI.AssemblyInfo.cs
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ConsoleUI.csproj.CoreCompileInputs.cache
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ConsoleUI.dll
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/refint/ConsoleUI.dll
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ConsoleUI.pdb
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ref/ConsoleUI.dll

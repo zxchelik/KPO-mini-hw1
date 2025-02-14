@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPO-mini-hw1", "KPO-mini-hw1\KPO-mini-hw1.csproj", "{C455AF4A-2D0A-4B6F-A8B3-0291EB9993C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{C3682C0F-0EA0-4D8D-ACC1-0AC9D1BF7E60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{C48BA0D4-26A4-4C24-831E-D3E4E5519AEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C455AF4A-2D0A-4B6F-A8B3-0291EB9993C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C455AF4A-2D0A-4B6F-A8B3-0291EB9993C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C455AF4A-2D0A-4B6F-A8B3-0291EB9993C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C455AF4A-2D0A-4B6F-A8B3-0291EB9993C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3682C0F-0EA0-4D8D-ACC1-0AC9D1BF7E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3682C0F-0EA0-4D8D-ACC1-0AC9D1BF7E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3682C0F-0EA0-4D8D-ACC1-0AC9D1BF7E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3682C0F-0EA0-4D8D-ACC1-0AC9D1BF7E60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C48BA0D4-26A4-4C24-831E-D3E4E5519AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C48BA0D4-26A4-4C24-831E-D3E4E5519AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C48BA0D4-26A4-4C24-831E-D3E4E5519AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C48BA0D4-26A4-4C24-831E-D3E4E5519AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
