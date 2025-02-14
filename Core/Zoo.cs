@@ -6,23 +6,22 @@ namespace Core;
 
 public class Zoo(IVetClinic vetClinic)
 {
-    private List<Animal> Animals { get; } = [];
-    public List<IInventory> Inventories { get; } = [];
+    public InventoryList Inventories { get; } = [];
 
     // Метод для принятия нового животного в зоопарк
     public bool AdmitAnimal(Animal animal, Func<HealthStates> getAnimalHealth)
     {
         if (!vetClinic.CheckHealth(animal, getAnimalHealth())) return false;
-        Animals.Add(animal);
+        Inventories.Add(animal);
         return true;
     }
 
     // Подсчёт общего количества еды
-    public int TotalFoodConsumption() => Animals.Sum(a => a.Food);
+    public int TotalFoodConsumption() => Inventories.OfType<Animal>().Sum(a => a.Food);
 
     // Список животных, пригодных для контактного зоопарка (травоядные с добротой > 5)
     public IEnumerable<Herbo> GetInteractiveAnimals() =>
-        Animals.OfType<Herbo>().Where(a => a.Kindness > 5);
+        Inventories.OfType<Herbo>().Where(a => a.Kindness > 5);
 
     // Вывод инвентаризации
     public string PrintInventory()

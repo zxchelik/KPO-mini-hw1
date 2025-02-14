@@ -9,3 +9,4 @@
 /Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/Core/obj/Debug/net9.0/refint/Core.dll
 /Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/Core/obj/Debug/net9.0/Core.pdb
 /Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/Core/obj/Debug/net9.0/ref/Core.dll
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/Core/obj/Debug/net9.0/Core.sourcelink.json

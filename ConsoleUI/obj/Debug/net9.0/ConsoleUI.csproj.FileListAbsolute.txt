@@ -9,3 +9,4 @@
 /Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/refint/ConsoleUI.dll
 /Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ConsoleUI.pdb
 /Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ref/ConsoleUI.dll
+/Users/misha/RiderProjects/KPO/HW/KPO-mini-hw1/ConsoleUI/obj/Debug/net9.0/ConsoleUI.sourcelink.json

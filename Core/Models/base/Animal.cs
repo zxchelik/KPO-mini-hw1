@@ -1,12 +1,12 @@
 using Core.Interfaces;
+using Core.Inventory;
 
 namespace Core.Models;
 
-public abstract class Animal(string name, int food, int number) : IAlive, IInventory
+public abstract class Animal(string name, int food) : InventoryItem, IAlive
 {
     public string Name { get; set; } = name;
     public int Food { get; set; } = food;
-    public int Number { get; set; } = number;
     public bool IsHealthy { get; set; } = true;
 
     public override string ToString()

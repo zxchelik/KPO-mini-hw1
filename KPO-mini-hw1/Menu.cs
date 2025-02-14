@@ -20,12 +20,16 @@ public class Menu
         var zoo = _serviceProvider.GetService<Zoo>()!;
 
         // Добавим несколько объектов инвентаря
-        zoo.Inventories.Add(new Table("Столовая", 101));
-        zoo.Inventories.Add(new Computer("Рабочий компьютер", 102));
+        zoo.Inventories.Add(new Table("Столовая"));
+        zoo.Inventories.Add(new Computer("Рабочий компьютер"));
+        zoo.Inventories.Add(new Monkey("Монке", 10, 4));
+        zoo.Inventories.Add(new Rabbit("Монке", 20, 10));
+        zoo.Inventories.Add(new Tiger("АйТигр", 10));
     }
-    
+
     public void Run()
     {
+        var zoo = _serviceProvider.GetService<Zoo>()!;
         Console.Clear();
         const string header = "--- Меню ---";
         string[] buttons =
@@ -46,13 +50,18 @@ public class Menu
                     AdmitAnimalMenu();
                     break;
                 case 1:
-                    PrintInfo("1");
+                    PrintInfo($"Общее количество еды для животных: {zoo.TotalFoodConsumption()} кг/день");
                     break;
                 case 2:
-                    PrintInfo("2");
+                    var interactiveAnimals = zoo.GetInteractiveAnimals();
+                    var info = interactiveAnimals.Aggregate(
+                        "Животные для контактного зоопарка:",
+                        (current, animal) => current + $"\n{animal}"
+                    );
+                    PrintInfo(info);
                     break;
                 case 3:
-                    PrintInfo("3");
+                    PrintInfo(zoo.PrintInventory());
                     break;
                 case 4:
                     isDone = true;
@@ -61,8 +70,12 @@ public class Menu
         } while (!isDone);
     }
 
-    private void PrintInfo(string info)
+    private static void PrintInfo(string info)
     {
+        Console.Clear();
+        Console.WriteLine(info);
+        Console.Write("\nНажмите любую клавишу чтобы продолжить...");
+        Console.ReadKey();
     }
 
     private void AdmitAnimalMenu()
@@ -71,28 +84,30 @@ public class Menu
         if (animalType is null) return;
 
         var name = ConsoleUI.InputFromUser<string>.Input("Введите имя");
-        var number = ConsoleUI.InputFromUser<int>.Input("Введите инвентаризационный номер");
         var food = ConsoleUI.InputFromUser<int>.Input("Введите количество еды (кг/день)");
-        Animal? animal = null;
+        Animal animal = null!;
         switch (animalType)
         {
             case AnimalTypes.Monkey:
-                animal = new Monkey(name, number, food, GetKindness());
+                animal = new Monkey(name, food, GetKindness());
                 break;
             case AnimalTypes.Rabbit:
-                animal = new Rabbit(name, number, food, GetKindness());
+                animal = new Rabbit(name, food, GetKindness());
                 break;
             case AnimalTypes.Tiger:
-                animal = new Tiger(name, number, food);
+                animal = new Tiger(name, food);
                 break;
             case AnimalTypes.Wolf:
-                animal = new Wolf(name, number, food);
+                animal = new Wolf(name, food);
                 break;
         }
-        
+
         var zoo = _serviceProvider.GetService<Zoo>()!;
-        
-        var admitted = zoo.AdmitAnimal(animal!,GetHealthStates);
+
+        var info = zoo.AdmitAnimal(animal, GetHealthStates)
+            ? $"Животное {animal.Name} принято в зоопарк с номером {animal.Number}."
+            : $"Животное {animal.Name} не соответствует требованиям здоровья.";
+        PrintInfo(info);
     }
 
     private static AnimalTypes? GetAnimalType()

@@ -1,3 +1,3 @@
 namespace Core.Inventory;
 
-public class Computer(string name, int number) : Thing(name, number);
+public class Computer(string name) : Thing(name);
